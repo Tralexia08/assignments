@@ -33,7 +33,7 @@ docker container run -d --name web -p 8080:80 nginx:1.25
 
 Since `nginx:1.25` was not cached locally, Docker pulled all image layers from Docker Hub before starting the container. Each hash (e.g. `77cea143f3c3`) represents a separate image layer. Docker downloads and caches layers independently — if another image shares a layer, it is not re-downloaded. The final long hash on the last line is the **container ID** of the newly created `web` container.
 
-![Terminal showing docker container run pulling nginx:1.25 layers and docker ps confirming the container is up](<Screenshot 2026-04-26 at 4.57.54 PM.png>)
+![Terminal showing docker container run pulling nginx:1.25 layers and docker ps confirming the container is up](Screenshot 2026-04-26 at 4.57.54 PM.png)
 
 > The `docker ps` output confirms the container is running: status `Up 11 seconds`, port mapping `0.0.0.0:8080->80/tcp`, and name `web`.
 
